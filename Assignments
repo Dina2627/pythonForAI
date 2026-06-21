@@ -1,0 +1,20 @@
+#Assignment 1
+"""
+name = "Dina Ali"
+age = 19
+GPA = 2.53
+country = "Egypt"
+city = "Giza"
+univercity = "Cairo"
+college = "Computer science"
+
+print("------------------------------------------")
+print("Name: " +name)
+print("Age: " + str(age))
+print("GPA: "+str(GPA))
+print("country: "+country)
+print("city: "+city)
+print("uni: "+univercity)
+print("college: "+college)
+print("---------------------------------------------")
+"""
