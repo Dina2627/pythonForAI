@@ -1,0 +1,48 @@
+# all data in python is <<<<object>>>>
+ print(type(10))
+print("-----------------------------------------------------------")
+#reserved words
+help("keywords")
+
+#\b -> back space : delete the last char in the word
+print("hello\bworld")
+
+"""
+print("hello " \
+" word " \
+" yup")
+"""
+print("-----------------------------------------------------------")
+
+print("i love back slash \\")
+print('i love single qoutes \'test\'')
+print("i love double qoutes \"test\"")
+print("i love \n world")
+print("123456\rABCD")
+print("hi\t dina")
+print("\x4d") #xhh to get hexa value
+
+print("-----------------------------------------------------------")
+\ & \\ & \\\
+
+value = """first 
+second "test" \ 'test   #\ not uniqe cha
+third
+"""
+print (value)
+
+value1 = """first 
+second "test" \\ 'test
+third
+"""
+print (value1)
+
+value2 = """first 
+second "test" \\\ 'test
+third
+"""
+print (value2)
+
+print("-----------------------------------------------------------")
+
+
