@@ -45,4 +45,42 @@ print (value2)
 
 print("-----------------------------------------------------------")
 
+#formatting old way
+
+name = "Dina"
+age = 19
+rank = 10
+
+print("my name is: " + name)
+#print("my age is: " + age) #type error
+
+#solve>>
+print("my name is: %s" % "dina")
+print("my name is: %s" %name)
+print("my name is %s and my age is %d and my rank is %f" %(name , age , rank))
+val = "hello world"
+print("message is %.5s" %val)  #%.5s print first five elements
+
+# %s -> string , %d -> digits (number) , %f -> float
+
+print("-----------------------------------------------------------")
+
+#formatting new way
+
+print("my name is: {}" .format("dina"))
+print("my name is: {}" .format(name))
+print("my name is {:s} and my age is {:d} and my rank is {:f}" .format(name , age , rank))  # we can do {} or {:f} and so on with d , s
+
+my_money = 500398
+print("my money in the bank is {:,d}" .format(my_money))
+
+#if we want to reorder 
+
+a , b , c = "one" , "two" , "three"
+print("hello {2} {0} {1}".format(a, b ,c))
+
+print("-----------------------------------------------------------")
+
+#way in java
+print(f"my name is: {name}")
 
