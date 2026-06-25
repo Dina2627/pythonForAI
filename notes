@@ -83,4 +83,10 @@ print("-----------------------------------------------------------")
 
 #way in java
 print(f"my name is: {name}")
+print("-----------------------------------------------------------")
+When you explicitly convert a value from one data type to another, it is called typecasting."
+# age = "20"      # String
+# age = int(age)  # Typecasting to Integer
+
+# print(age)      # 20
 
