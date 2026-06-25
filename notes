@@ -90,3 +90,60 @@ When you explicitly convert a value from one data type to another, it is called 
 
 # print(age)      # 20
 
+print("-----------------------------------------------------------")
+
+#collections data
+
+#list
+"list is orderd , indexable , mutable , items not unique and has different datatypes"
+friend = ["dina", "ali" ,"hamed"]
+family = ["ola", "emy" , "samy"]
+friend.append("abdo")  #append -> add element in the last
+print(friend)
+
+friend.append(family)
+print(friend)
+
+friend1 = ["dina", "ali" ,"hamed"]
+family1 = ["ola", "emy" , "samy"]
+friend1.extend(family1)
+print(friend1)
+friend1.remove("ali")  #remove one item
+print(friend1)
+
+#sort(reverce = True or Falce)  & clear() -> removre all items  & copy()  & insert(index , object) & pop(index) -> remove and
+friend1.insert(0, "test")
+print(friend1)
+
+#tuple>>>>>
+"1-tuple are ordered , to use index to access item "
+"2- indexing"
+"3- immutable -> tuple doesn't support item assignment , we cant add or remove"
+"Mutable means changeable after it is created."
+"4- items is not unique"
+"5- tuples has different data type"
+
+#tuple concatination
+
+a = (1 , 2 , 3 , 4)
+b = (5 , 6)
+c = a + b 
+d = a + (8 , 9) + c 
+
+print(c)
+print(d)
+
+"when tuple has one element we add after it , to specialize tuple and string"
+a = ("ss" ,) # we can write tuple's items without ()
+
+namee = "Dina"
+print(" Dina " * 4)
+
+#count(element) -> check how many element repeated
+#index()
+
+goo = ( 1 , 3 , 7 , 8 , 2 , 6 , 5)
+print( "the position of index is: " + str(goo.index(7)) )
+print(f"the position of index is: {goo.index(7)}")
+print("the position of index is {}".format(goo.index(7)))
+
