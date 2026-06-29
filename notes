@@ -147,3 +147,16 @@ print( "the position of index is: " + str(goo.index(7)) )
 print(f"the position of index is: {goo.index(7)}")
 print("the position of index is {}".format(goo.index(7)))
 
+#set
+
+myset1 = { 1 , "Dina" , (1 , 2 , 5) }
+
+"set items not ordered and not indexed"
+"set indexing and slicing can't be done"
+"set has only immutable data types (numbers , strings ,  tuples)  list and dict are not"
+"set items is unique  -> remove repeated items and print it only one time"
+
+#clear() -> remove all elements && union() -> collect alot of set in one set
+#add() && Copy() &&  remove() -> if element doesn't exist it makes error && discard() -> if element doesn't exist it doesn't make error
+# pop() -> because we don't have index it give random element  && update()  && difference() && issubset() && issuperset()
+  
