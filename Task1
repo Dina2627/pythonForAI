@@ -1,0 +1,15 @@
+# #Task 1
+print("Welcome sir =)")
+
+print("-" * 40)
+total =int(input("please enter the totla amount: "))
+
+total10 = total - total * 0.10
+total20 = total - total * 0.20
+
+if total < 100:
+    print(f"you don't have discount and total amount is {total}")
+elif(total >= 100 and total < 500):
+    print(f"you have 10% discount and total amount is {total10}")
+elif( total >= 500):
+    print(f"you have 20% discount and total amount is {total20} ")    
