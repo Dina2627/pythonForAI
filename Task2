@@ -1,0 +1,13 @@
+#Task 2
+
+Perfection = (input("Is the student proficient in Python? (Yes/No)")).capitalize().strip()
+Years_of_experience = int(input("How many years of experience or projects? "))
+study = (input("Do you have a university degree in cs or have you completed an intensive training (Bootcamp)? (Yes/No)")).capitalize().strip()
+
+if(Perfection == "Yes"):
+    if(Years_of_experience >= 2 or study == "Yes"):
+        print("Accepted")
+    else:
+        print("Not Accepted")    
+else:
+    print("Not Accepted")   
