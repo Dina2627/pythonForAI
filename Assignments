@@ -36,5 +36,33 @@ print(f"country: {country}")
 print(f"city: {city}")
 print(f"uni: {univercity}")
 print(f"college: {college}")
-print("---------------------------------------------")
+#---------------------------------------------------------------------------------------------
     
+#Practical >>>>>
+
+admins = ["Ahmed" , "Osama" ,"Mahmoud" , "Rahma" , "Sameh", "Manal" , "Enas"]
+
+name = input("please enter your name ").capitalize().strip()
+
+if name in admins:
+    print(f"Hello {name} welcome back ")
+    option = input("Delete or Update your name? ".capitalize().strip())
+    if option == "Delete":
+       Del = admins.remove(name)
+       print(admins)
+    elif option == "Update":
+        find = admins.index(name)
+        upd = input("the new name ").strip().capitalize()
+        admins[find] = upd
+        print(admins)
+
+    else:
+        print("Wrong options choosed")    
+        
+else:
+    suggest = input("Y are not admin , do you want to add you? (Yes/No)").capitalize().strip()
+    if suggest == "Yes":
+        addintion = admins.append(name)
+        print(admins)
+    elif suggest == "No":
+        print("Y are not admin")        
