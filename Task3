@@ -1,0 +1,16 @@
+#Task 3    
+
+money = 5000
+PIN = 1234
+Id = int(input("please enter your  PIN"))
+if Id != PIN:
+    print("Incorrect PIN, transaction declined.") 
+else:
+   options = int(input("Do you want (1)withdraw or (2)Check Balance"))
+   if(options == 2):
+       print(money)
+   elif(options == 1):
+         withdraw =int(input("please enter the num you want to withdraw"))
+         if(withdraw <= money):
+           money = money - withdraw
+           print(f"Done , Your remaining balance is {money}")   
