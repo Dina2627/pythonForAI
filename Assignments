@@ -18,6 +18,26 @@ print("uni: "+univercity)
 print("college: "+college)
 print("---------------------------------------------")
 """
+
+#Assignment 1 Updated
+name = "Dina Ali"
+age = 19
+GPA = 2.53
+country = "Egypt"
+city = "Giza"
+univercity = "Cairo"
+college = "Computer science"
+
+print("------------------------------------------")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"GPA: {GPA}")
+print(f"country: {country}")
+print(f"city: {city}")
+print(f"uni: {univercity}")
+print(f"college: {college}")
+print("---------------------------------------------")
+    
 #--------------------------------------------------------------------------------------------------------------------------
 #Task 1
 print("Welcome sir =)")
