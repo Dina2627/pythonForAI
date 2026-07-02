@@ -159,4 +159,11 @@ myset1 = { 1 , "Dina" , (1 , 2 , 5) }
 #clear() -> remove all elements && union() -> collect alot of set in one set
 #add() && Copy() &&  remove() -> if element doesn't exist it makes error && discard() -> if element doesn't exist it doesn't make error
 # pop() -> because we don't have index it give random element  && update()  && difference() && issubset() && issuperset()
-  
+
+
+# dictionary
+"dict key need to be immutable -> list not allowed"
+"value can be any data type"
+"dect key need to be unique if you repeat ,the priority to the last one"
+"dect not orderd and not indexing"
+
