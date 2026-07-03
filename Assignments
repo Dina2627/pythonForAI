@@ -20,9 +20,9 @@ print("---------------------------------------------")
 """
 
 #Assignment 1 Updated
-name = "Dina Ali"
-age = 19
-GPA = 2.53
+name = "Malak"
+age = 24
+GPA = 2.9
 country = "Egypt"
 city = "Giza"
 univercity = "Cairo"
