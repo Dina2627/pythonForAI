@@ -66,3 +66,20 @@ else:
         print(admins)
     elif suggest == "No":
         print("Y are not admin")        
+#-------------------------------------------------------------------------------------------------------------------
+
+# right password
+trying =  0
+password = "12345"
+
+while trying < 5:
+    passw = input("enter the pass ")
+    if passw == password:
+        print("right pass ;) ")
+        trying = 5
+    else:
+        print("fail pass , try again ")
+        trying += 1    
+        print(f"{trying} times used ")
+if passw != password:
+    print("enough num of trying ")    
