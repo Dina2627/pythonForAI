@@ -1,0 +1,59 @@
+
+# Function to calc performance bonus
+def calc_Bonus(Base_Salary , Performance_Rating):
+    if( Performance_Rating == 5):
+        Bonus = 0.2 * Base_Salary
+        New_Salary =  Base_Salary + Bonus
+        print("-" * 80)
+        print(f"Excellent performance you have 20% bonus and the new salary become {New_Salary}")
+    elif( PendingDeprecationWarning  == 3 or PendingDeprecationWarning == 4):
+        Bonus =  0.1 * Base_Salary
+        New_Salary = Base_Salary + Bonus 
+        print("-" * 80)
+        print(f"Good performance you have 20% bonus and the new salary become {New_Salary}")    
+    elif(Performance_Rating == 2 or Performance_Rating == 1):
+        Bonus = Base_Salary
+        New_Salary = Base_Salary
+        print("-" * 80)
+        print(f"you Need to improve your performance , Your salary still as it was")    
+    else:
+        print("-" * 80)
+        print("ُError num")    
+
+    return Bonus
+
+# Function to calculate progressive tax deductions
+def Calc_Tax(gross_Salary):
+   if(gross_Salary > 7000):
+       Tax_Percentage = 0.15
+   elif( gross_Salary <=7000 and gross_Salary >= 3000):
+       Tax_Percentage = 0.10
+   elif( gross_Salary < 3000):
+       Tax_Percentage = 0
+
+   return gross_Salary * Tax_Percentage      
+
+def main_HR_App():
+    name = str(input("Enter your name "))
+    Base_Salary = float(input("Enter your current salary "))    
+    Performance_Rating = int(input("Enter you rating (from 1 to 5) "))
+    # validation
+    if(Performance_Rating > 5 or Performance_Rating < 1 or Base_Salary < 0):
+        print("Invalid data , try again")
+        return
+    Bonus = calc_Bonus(Base_Salary,Performance_Rating)
+    gross_salary = Base_Salary + Bonus
+    tax = Calc_Tax(gross_salary)
+    net_salary = gross_salary - tax
+
+    print("-" * 80)
+    print("PayRoll statement".center(80 , "-"))
+    print("-" * 80)
+    print(f"• Base Salary:      {Base_Salary} ")
+    print(f"• Earned Bonus:     {Bonus} ")
+    print(f"• Tax Deductions:   {tax} ")
+    print("-" * 80)
+    print(f"NET PAYABLE CASH: {net_salary}")
+    print("-"*80)
+
+main_HR_App()
