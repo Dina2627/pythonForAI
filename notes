@@ -166,4 +166,10 @@ myset1 = { 1 , "Dina" , (1 , 2 , 5) }
 "value can be any data type"
 "dect key need to be unique if you repeat ,the priority to the last one"
 "dect not orderd and not indexing"
+#================================================================================================================
+
+list = [1 , 2 , 3 , 4]
+
+print(list)
+print(*list)
 
