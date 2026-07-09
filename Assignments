@@ -83,3 +83,29 @@ while trying < 5:
         print(f"{trying} times used ")
 if passw != password:
     print("enough num of trying ")    
+
+#=================================================================================================
+# >>practical <<
+
+mySkills = {
+    'HTML' : "90%",
+    'Css' : "70%",
+    'Python' : "40%"
+}
+
+mytuple = ("HTML" , "CSS" , "JS")
+
+def show_skills(name , *skills , **Skills_With_Progress):
+    print(f"Hello {name}")
+    print("=" * 80)
+    print("skills without progress is: ")
+
+    for skill in skills:
+        print(f"-{skill}")
+
+    print("skills with progress is: ")
+    for skillss , valus in Skills_With_Progress.items():
+        print(f"-{skillss} => {valus}")     
+
+
+show_skills("Dina" , *mytuple , **mySkills)    
