@@ -174,3 +174,12 @@ print(list)
 print(*list)
 
 (*list for tuple and **List for dictionary)
+
+
+
+print("word" , end =" ")  # to write every thing in the same line when we use loop or others
+       
+def sayHello(name): return (f"Hello {name}") # we can write the function like that
+    
+hello = lambda name : f"Hello {name}"  # lambda funtion
+print(hello("Ahmed"))   
