@@ -1,1 +1,173 @@
+print("Welcome to python bank".center(40 ,"="))
+
+Menu = "1.Register\n" \
+           "2.Login\n"\
+           "3.Exit\n"
+
+ 
+Data ={
+    "Ola": {
+        "Pass": "abcdef",
+        "Balance": 500
+    },
+    
+    "Ahmed":{
+       "Pass" : "121212",
+       "Balance" : 1200
+    },
+    "Ali":{
+       "Pass" : "123456",
+       "Balance" : 2000
+    }
+
+}
+
+
+while True:
+    
+    print("=" * 40)
+    print(Menu)
+
+    num = int(input("Enter the num you want to move to "))
+
+    if(num == 1):
+    
+       User = input("Enter your username ")
+
+       if(User == ""):
+          print("Wrong , Enter right User")
+          input("Enter your username ")
+
+       if User not in Data:
+          print("User Accepted")
+
+       else:
+          input("Choose another username: ")
+
+       
+       Pass = input("Enter your Password (Not less 6 digits) : ")
+
+       while len(Pass) < 6 :
+          print("Try again , Pass should not less than 6 digits : ")
+          Pass =input("Enter your Password (Not less 6 digits) : ")
+
+       else:
+          print("Pass accepted")  
+       
+       Data.update({User : {"Pass" : Pass , "Balance":0}})   
+
+
+    elif(num == 2):
+       User = input("Enter your username ")
+       Pass = input("Enter your Password ")
+
+       if(User in Data and Data[User]["Pass"] == Pass):
+         print("Bank Menu".center(40 , "="))
+
+         BankMenu = "1. Check Balance\n" \
+                    "2. Deposit\n" \
+                    "3. Withdraw\n" \
+                    "4. Transfer\n"\
+                    "5. Change Password\n"\
+                    "6. Logout\n"\
+                        
+         print(BankMenu)
+         while(True):
+            
+            choose = int(input("Choose num from menu : "))
+            if(choose == 1):
+               print("=" * 40)
+               print(f"Your Balance is {Data[User]["Balance"]}")
+               print("=" * 40)
+
+            elif(choose ==2):
+               print("=" * 40)
+               print("Enter the amount you want to add (amount > 0) : ")
+               amount1 = int(input("Add the amount : "))
+
+               while(amount1 < 0):
+                  print("Try again , Add right amount : ")
+               Data[User]["Balance"] += amount1
+
+               print(f"Process done successfuly! , Your Balance now is {Data[User]["Balance"]}")
+               print("=" * 40)
+
+            elif(choose == 3):
+               print("=" * 40)
+               print("Enter the amount you want to withdraw (amount > 0) : ") 
+               amount2 = int(input("withdraw the amount : "))
+
+               while(amount2 < 0):
+                  print("Try again , withdraw right amount")
+                
+               if(amount2 > Data[User]["Balance"]):
+                  print("Your balance is not enough , You cannot be withdrawn")
+
+               else:
+                  Data[User]["Balance"] -= amount2 
+                  print(f"Process done successfuly! , Your Balance now is {Data[User]["Balance"]}")
+
+               print("=" * 40)
+
+            elif(choose == 4 ):
+               print("=" * 40)
+               User = input("Enter your username ")
+               RecipAmount =int(input("Enter the amount you want to receive "))
+
+               while(RecipAmount < 0):
+                  print("Try again , withdraw right amount")
+
+               if(RecipAmount > Data[User]["Balance"]):
+                  print("Your balance is not enough , You cannot be withdrawn")
+               else:
+                  recipient_Username = (input("Enter the recipient's Username "))
+                  
+               if(recipient_Username not in Data) :
+                  print("The recipient's Username is not exist ")
+               else:
+                  print("The recipient's Username is exist and Process done successfuly")   
+               Data[User]["Balance"] -= RecipAmount 
+               print(f"Your balance become {Data[User]["Balance"]}")
+               Data[recipient_Username]["Balance"] = Data[recipient_Username]["Balance"] + RecipAmount
+               print(f"The recipient's Username balance become {Data[recipient_Username]["Balance"]}")    
+               print("=" * 40) 
+
+
+            elif(choose == 5):
+
+               print("=" * 40)
+               Pass = input("Enter your current Password ")
+
+               if(Data[User]["Pass"] != Pass):
+                  input("Wrong Pass , Try again : ")
+
+               New_Pass = input("Enter your new Password (Not less 6 digits)")
+               
+               while len(New_Pass) < 6 :
+                    print("Try again , Pass should not less than 6 digits")
+                    Pass =input("Enter your new Password (Not less 6 digits)")
+
+               Data[User]["Pass"]  =  New_Pass  
+               print("=" * 40) 
+
+
+            elif(choose == 6):
+
+               print("=" * 40)
+               print("Logged out successfully.")
+               break      
+                   
+         
+                    
+       else:
+         print("<<<<You should register first>>>>")
+         
+                      
+
+    elif num == 3:
+        print("Thank you for using Python Bank =)")
+        break
+
+
+
 
