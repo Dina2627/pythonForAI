@@ -223,5 +223,80 @@ print(hello("Ahmed"))
 "Iterable → something you can loop over (str, list, tuple, etc.)."
 "Iterator → an object that produces one value at a time."
 
-# ===========================================================================================================================
+# =========================================================================================
+# import os
 
+# main current working directory
+# print(os.getcwd())  
+
+# print(os.path.abspath(__file__))
+
+# Directory for the opened file
+# print(os.path.dirname(os.path.abspath(__file__)))
+
+# Change current working directory
+# os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# print(os.getcwd())
+
+# Myfile = open(r"C:\Users\asus\Desktop\Dina.txt" , "r")
+# print(Myfile.name)
+# print(Myfile.mode)
+# print(Myfile.encoding)
+# print(Myfile.read(10))
+# print(Myfile.readline())
+# print(Myfile.readline())
+
+# ======================================================================================
+# print(bin(10))
+
+# a = 12
+# print(id(a))
+
+# print("Hello" , "Dina" , "How are you" , sep = "||" )
+
+# dir -> print all functions in modules
+# ========================================================================================
+"iterator is an object that knows how to produce values one by one , but it doesn't produce them until you ask for them."
+"Iterable → something you can loop over (str, list, tuple, etc.)."
+"Iterator → an object that produces one value at a time."
+"Yield => Generate value , but return => return value and function control when it uses this value"
+# ===========================================================================================================================
+# def Decorator(func):
+    
+#     def nestedfunc(name):
+#         print("Before")
+
+#         func(name)
+
+#         print("After")
+
+#     return nestedfunc
+
+# @Decorator    
+# def sayHello(name):
+#     print(f"===Hello==== {name}") 
+
+# #Decorator(sayHello)()
+
+# sayHello("Dina")
+# ====================================================================
+
+# from PIL import Image
+
+# MyImage = Image.open(r"C:\Users\asus\Desktop\PythonForAi\516529-cartoons-full.jpg")
+
+# MyImage.show()
+
+# myBox =(0 , 0 ,400 , 400)
+# MyNewImage = MyImage.crop(myBox)
+
+# MyNewImage.show()
+# =============================================================
+# def Elzero_Function(name):
+#     ''' this is Doc String about function to say hello '''
+#     print(f"Hello {name}")
+
+# Elzero_Function("Dina")    
+
+# print(Elzero_Function.__doc__)
+# help(Elzero_Function)
